@@ -1,10 +1,45 @@
 /********** Template CSS **********/
+
+
 :root {
     --primary: #86B817;
     --secondary: #FE8800;
     --light: #F5F5F5;
     --dark: #14141F;
 }
+
+.package-item img {
+    width: 100%;
+    /* L'image prend toute la largeur */
+    height: 250px;
+    /* Hauteur fixe pour toutes les images */
+    object-fit: cover;
+    /* Maintient le ratio de l'image et coupe l'excédent */
+    object-position: center;
+    /* Centre l'image à l'intérieur du cadre */
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-row .col-12,
+.form-row .col-sm-4 {
+    margin-bottom: 10px;
+}
+
+.form-row .col-12 .form-control,
+.form-row .col-sm-4 .form-control {
+    max-width: 100%;
+}
+
+@media (max-width: 575.98px) {
+    .form-row .col-sm-4 {
+        width: 100%;
+    }
+}
+
 
 .fw-medium {
     font-weight: 600 !important;
@@ -141,7 +176,7 @@
         border-bottom: 1px solid rgba(256, 256, 256, .1);
         z-index: 999;
     }
-    
+
     .sticky-top.navbar-light {
         position: fixed;
         background: #FFFFFF;
@@ -178,7 +213,7 @@
     background-size: cover;
 }
 
-.breadcrumb-item + .breadcrumb-item::before {
+.breadcrumb-item+.breadcrumb-item::before {
     color: rgba(255, 255, 255, .5);
 }
 
@@ -325,6 +360,7 @@
 }
 
 @media (min-width: 768px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 200px;
@@ -332,6 +368,7 @@
 }
 
 @media (min-width: 992px) {
+
     .testimonial-carousel::before,
     .testimonial-carousel::after {
         width: 300px;
